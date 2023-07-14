@@ -1,0 +1,26 @@
+{
+  "run": [{
+    "method": "shell.start",
+    "params": {
+      "path": "companion-app"
+    }
+  }, {
+    "method": "shell.enter",
+    "params": {
+      "message": "npm run dev",
+      "on": [{
+        "event": "/(http:\\S.+)/",
+        "return": "{{event.matches[0][1]}}"
+      }]
+    },
+    "notify": true
+  }, {
+    "method": "browser.open",
+    "params": {
+      "uri": "{{input}}",
+      "target": "_blank"
+    }
+  }, {
+    "method": "process.wait"
+  }]
+}
