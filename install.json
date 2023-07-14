@@ -78,7 +78,7 @@
   }, {
     "method": "notify",
     "params": {
-      "html": "<b>Install complete</b>Click here to go to the start script!",
+      "html": "<b>Install complete</b><br><br>Click here to go to the start script!",
       "href": "./start.json"
     }
   }]
